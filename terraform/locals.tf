@@ -3,7 +3,7 @@ locals {
     Environment = var.environment
     Project     = "wanderlust-mega-project"
     ManagedBy   = "terraform"
-    CreatedBy   = "Sujal_MALHOTRA"
+    CreatedBy   = "Sujal_Malhotra"
     CreatedDate = formatdate("YYYY-MM-DD", timestamp())
   }
 
