@@ -526,3 +526,7 @@ eksctl delete cluster --name=wanderlust --region=us-west-1
 ```
 
 #
+
+## To clone this repo
+
+git
