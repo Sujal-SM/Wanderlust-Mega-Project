@@ -1,22 +1,32 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: myapp
+  name: mongo-deployment
+  namespace: wanderlust
+  labels:
+    app: mongo
 spec:
+  replicas: 1
   selector:
     matchLabels:
-      app: myapp
+      app: mongo
   template:
     metadata:
+      name: mongo
       labels:
-        app: myapp
+        app: mongo
     spec:
       containers:
-      - name: myapp
-        image: <Image>
-        resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
-        ports:
-        - containerPort: <Port>
+        - name: mongo
+          image: mongo
+          ports:
+            - containerPort: 27017
+          volumeMounts:
+            - name: mongo-storage
+              mountPath: /data/db
+      volumes:
+        - name: mongo-storage
+          persistentVolumeClaim:
+            claimName: mongo-pvc
+
+
