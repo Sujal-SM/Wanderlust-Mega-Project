@@ -10,6 +10,26 @@
 - **Frontend Image**: `madhupdevops/frontend-wanderlust:v2.1.8`
 - **Backend Image**: `madhupdevops/backend-wanderlust:v2.1.8`
 
+### Docker Commands for Image Management:
+
+**Pull existing images:**
+```bash
+docker pull sujalll11/frontend-wanderlust:v2.1.8
+docker pull sujalll11/backend-wanderlust:v2.1.8
+```
+
+**Retag images (if needed):**
+```bash
+docker tag sujalll11/frontend-wanderlust:v2.1.8 <your-dockerhub-username>/frontend-wanderlust:v2.1.8
+docker tag sujalll11/backend-wanderlust:v2.1.8 <your-dockerhub-username>/backend-wanderlust:v2.1.8
+```
+
+**Push images to your repository:**
+```bash
+docker push <your-dockerhub-username>/frontend-wanderlust:v2.1.8
+docker push <your-dockerhub-username>/backend-wanderlust:v2.1.8
+```
+
 #
 ## Steps for Kubernetes deployment:
 
