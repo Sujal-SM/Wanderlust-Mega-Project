@@ -6,6 +6,10 @@
 -  Create 2 AWS EC2 instance (Ubuntu) with instance type t2.medium and root volume 29GB.
 -  Setup <a href="https://github.com/DevMadhup/wanderlust/blob/devops/kubernetes/kubeadm.md"><u> Kubeadm </a></u>
 
+### Docker Images Used:
+- **Frontend Image**: `madhupdevops/frontend-wanderlust:v2.1.8`
+- **Backend Image**: `madhupdevops/backend-wanderlust:v2.1.8`
+
 #
 ## Steps for Kubernetes deployment:
 
@@ -17,7 +21,7 @@ sudo su
 #
 2) Clone code from remote repository (GitHub) :
 ```bash
-git clone -b devops https://github.com/DevMadhup/wanderlust.git
+git clone -b devops https://github.com/Sujal-SM/wanderlust.git
 ```
 
 #
